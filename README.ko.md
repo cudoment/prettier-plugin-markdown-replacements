@@ -180,7 +180,7 @@ Prettier는 한 언어에 파서를 하나만 씁니다. 이 플러그인도 파
 }
 ```
 
-짝이 되는 플러그인 [`prettier-plugin-markdown-compact-tables`](https://github.com/cudoment/prettier-plugin-markdown-compact-tables)는 마크다운 표를 정렬 패딩 없이 출력합니다. 두 플러그인은 서로 독립적이어서 각각 단독으로도 동작하며, 위 순서로 등록하면 함께 동작합니다.
+[`prettier-plugin-markdown-compact-tables`](https://github.com/cudoment/prettier-plugin-markdown-compact-tables)는 마크다운 표를 정렬 패딩 없이 출력합니다. 두 플러그인은 서로 독립적이어서 각각 단독으로도 동작하며, 위 순서로 등록하면 함께 동작합니다.
 
 ## 옵션
 

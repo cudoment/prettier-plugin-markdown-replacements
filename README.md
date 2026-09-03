@@ -180,7 +180,7 @@ Prettier resolves one parser per language. This plugin contributes a parser, and
 }
 ```
 
-The companion plugin [`prettier-plugin-markdown-compact-tables`](https://github.com/cudoment/prettier-plugin-markdown-compact-tables) prints Markdown tables without alignment padding. The two are independent: either works on its own, and in the order above they work together.
+[`prettier-plugin-markdown-compact-tables`](https://github.com/cudoment/prettier-plugin-markdown-compact-tables) prints Markdown tables without alignment padding. The two are independent: either works on its own, and in the order above they work together.
 
 ## Options
 

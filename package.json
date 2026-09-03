@@ -1,0 +1,51 @@
+{
+  "name": "prettier-plugin-markdown-replacements",
+  "version": "1.0.0",
+  "description": "Prettier plugin that applies configured text replacements to Markdown/MDX prose, leaving code spans, code blocks and MDX comments untouched.",
+  "keywords": [
+    "prettier",
+    "prettier-plugin",
+    "markdown",
+    "mdx",
+    "replace",
+    "typo"
+  ],
+  "homepage": "https://github.com/cudoment/prettier-plugin-markdown-replacements#readme",
+  "bugs": {
+    "url": "https://github.com/cudoment/prettier-plugin-markdown-replacements/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cudoment/prettier-plugin-markdown-replacements.git"
+  },
+  "license": "MIT",
+  "author": "cudoment",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "README.ko.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "peerDependencies": {
+    "prettier": "^3.5.3"
+  },
+  "devDependencies": {
+    "@mdx-js/mdx": "^3.1.0",
+    "prettier": "^3.9.6",
+    "vitest": "^3.2.7"
+  }
+}

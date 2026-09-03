@@ -1,0 +1,51 @@
+name: Publish
+
+# Publishes to npm whenever main carries a version that the registry does not
+# have yet. npm cannot overwrite a published version, so bumping the version in
+# package.json and pushing is what releases a change; every other push is a
+# no-op here. Authentication uses npm trusted publishing (OIDC), so no token is
+# stored in the repository.
+on:
+  push:
+    branches: [main]
+    paths: [package.json]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: npm
+      - run: npm ci
+
+      - name: Compare the version with the registry
+        id: version
+        run: |
+          name=$(node -p "require('./package.json').name")
+          version=$(node -p "require('./package.json').version")
+          if npm view "$name@$version" version >/dev/null 2>&1; then
+            echo "$name@$version is already published; nothing to do."
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "$name@$version is not on the registry; publishing."
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Trusted publishing needs npm 11.5.1 or later, which Node 22 does not
+      # ship with.
+      - if: steps.version.outputs.publish == 'true'
+        run: npm install -g npm@latest
+
+      # prepublishOnly runs the format check and the coverage suite first.
+      - if: steps.version.outputs.publish == 'true'
+        run: npm publish --provenance --access public

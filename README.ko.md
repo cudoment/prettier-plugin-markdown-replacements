@@ -1,6 +1,6 @@
 # prettier-plugin-markdown-replacements
 
-[![CI](https://github.com/cudoment/prettier-plugin-markdown-replacements/actions/workflows/ci.yml/badge.svg)](https://github.com/cudoment/prettier-plugin-markdown-replacements/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![Prettier 3.5+](https://img.shields.io/badge/prettier-3.5%2B-1A2B34?logo=prettier&logoColor=F7B93E)](https://prettier.io) [![Node.js 18+](https://img.shields.io/badge/node-%3E%3D18-5FA04E?logo=node.js&logoColor=white)](https://nodejs.org)
+[![CI](https://github.com/cudoment/prettier-plugin-markdown-replacements/actions/workflows/ci.yml/badge.svg)](https://github.com/cudoment/prettier-plugin-markdown-replacements/actions/workflows/ci.yml) [![npm](https://img.shields.io/npm/v/prettier-plugin-markdown-replacements.svg?logo=npm&logoColor=white)](https://www.npmjs.com/package/prettier-plugin-markdown-replacements) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE) [![Prettier 3.5+](https://img.shields.io/badge/prettier-3.5%2B-1A2B34?logo=prettier&logoColor=F7B93E)](https://prettier.io) [![Node.js 18+](https://img.shields.io/badge/node-%3E%3D18-5FA04E?logo=node.js&logoColor=white)](https://nodejs.org)
 
 [English](./README.md) | **한국어**
 
